@@ -1,4 +1,5 @@
 import React from "react";
+import {motion, useAnimation, useInView} from "framer-motion"
 import heroimg from "../assets/mekus-hero.jpg"
 function Herosection(){
     return(
