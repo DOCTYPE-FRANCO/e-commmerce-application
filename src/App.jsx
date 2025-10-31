@@ -57,6 +57,7 @@ function App(){
         }}
       />
       {/* Your Content/Components */}
+      <Homepage />
     </div>
   )
 }
