@@ -16,7 +16,7 @@ function Herosection(){
         }
     }, [isInView]);
     return(
-        <div className="relative w-full h-[800px]">
+        <div className="relative w-full h-[800px] pt-20 pl-14">
             <img 
                 src={heroimg}
                 className="absolute inset-0 w-full h-full object-cover"
@@ -24,12 +24,12 @@ function Herosection(){
 
             <div className="absolute inset-0 bg-black/40" />
 
-            <div ref={ref} className="relative z-20 flex flex-col gap-2">
+            <div ref={ref} className="relative z-20 flex flex-col gap-4">
                 <motion.p 
                     variants={variants}
                     initial="hidden"
                     animate={mainControls}
-                    className="text-5xl text-white font-extrabold"
+                    className="md:text-6xl text-white font-extrabold"
                 >
                     Elevate Your Style
                 </motion.p>
@@ -38,7 +38,7 @@ function Herosection(){
                     variants={variants}
                     initial="hidden"
                     animate={mainControls}
-                    className="text-3xl text-white bold"
+                    className="md:text-4xl text-white bold"
                 >
                     Discover premium clothing designed just for you.
                 </motion.p>
@@ -47,7 +47,7 @@ function Herosection(){
                     variants={variants}
                     initial="hidden"
                     animate={mainControls}
-                    className="w-[250px] h-[35px] font-extrabold bg-white hover:scale-110"
+                    className="w-[300px] h-[45px] font-extrabold bg-white hover:scale-110 flex justify-center items-center transition-transform duration-500 rounded-sm"
                 >
                     SHOP NOW
                 </motion.p>
