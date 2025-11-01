@@ -38,7 +38,7 @@ function Herosection(){
                     variants={variants}
                     initial="hidden"
                     animate={mainControls}
-                    className="md:text-4xl text-white bold"
+                    className="md:text-4xl text-white font-bold"
                 >
                     Discover premium clothing designed just for you.
                 </motion.p>
