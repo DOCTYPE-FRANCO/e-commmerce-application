@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { Routes, Route } from 'react-router-dom'
 import Homepage from './Components/Homepage'
 import Header from './Components/Header'
 
@@ -61,7 +61,9 @@ function App(){
       <div>
         <Header />
         <div>
-          <Homepage />
+          <Routes>
+            <Route path='/' element={<Homepage />} />
+          </Routes>
         </div>
       </div>
     </div>

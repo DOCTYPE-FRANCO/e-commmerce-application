@@ -7,7 +7,7 @@ function Herosection(){
     const mainControls = useAnimation();
     const variants = {
         hidden:{opacity: 0, x: 75},
-        visible:{opacity: 1, x: 0, transition: {duration: 1}}
+        visible:{opacity: 1, x: 0, transition: {duration: 2}}
     }
 
     useEffect(() =>{
@@ -24,34 +24,38 @@ function Herosection(){
 
             <div className="absolute inset-0 bg-black/40" />
 
-            <div ref={ref} className="relative z-20 flex flex-col gap-4">
-                <motion.p 
-                    variants={variants}
-                    initial="hidden"
-                    animate={mainControls}
+            <motion.div
+                ref={ref}
+                className="relative z-20 flex flex-col gap-4"
+                variants={variants}
+                initial="hidden"
+                animate={mainControls}
+            >
+
+                <p
                     className="md:text-6xl text-white font-extrabold"
                 >
                     Elevate Your Style
-                </motion.p>
+                </p>
 
-                <motion.p 
+                <p 
                     variants={variants}
                     initial="hidden"
                     animate={mainControls}
                     className="md:text-4xl text-white font-bold mb-7"
                 >
                     Discover premium clothing designed just for you.
-                </motion.p>
+                </p>
 
-                <motion.p 
+                <p 
                     variants={variants}
                     initial="hidden"
                     animate={mainControls}
                     className="w-[300px] h-[45px] font-extrabold bg-white hover:scale-110 flex justify-center items-center transition-transform duration-500 rounded-sm"
                 >
                     SHOP NOW
-                </motion.p>
-            </div>
+                </p>
+            </motion.div>
         </div>
     );
 }
