@@ -16,13 +16,13 @@ function Herosection(){
         }
     }, [isInView]);
     return(
-        <div className="relative w-full h-[800px] pt-32 pl-28">
+        <div className="relative w-full h-[600px] pt-32 pl-28">
             <img 
                 src={heroimg}
-                className="absolute inset-0 w-full h-full object-cover"
+                className="absolute inset-0 w-full h-[600px] object-cover"
             />
 
-            <div className="absolute inset-0 bg-black/40" />
+            <div className="absolute inset-0 bg-black/50" />
 
             <motion.div
                 ref={ref}
@@ -33,18 +33,18 @@ function Herosection(){
             >
 
                 <p
-                    className="md:text-6xl text-white font-extrabold"
+                    className="md:text-7xl text-white font-extrabold"
                 >
-                    Elevate Your Style
+                    Mekus Luxury
                 </p>
 
                 <p 
                     variants={variants}
                     initial="hidden"
                     animate={mainControls}
-                    className="md:text-4xl text-white font-bold mb-7"
+                    className="md:text-3xl text-white font-bold mb-7"
                 >
-                    Discover premium clothing designed just for you.
+                    Elevate your Style without breaking the bank.
                 </p>
 
                 <p 
