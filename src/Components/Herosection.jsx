@@ -7,7 +7,7 @@ function Herosection(){
     const mainControls = useAnimation();
     const variants = {
         hidden:{opacity: 0, x: 75},
-        visible:{opacity: 1, x: 0, transition: {duration: 2}}
+        visible:{opacity: 1, x: 0, transition: {duration: 1}}
     }
 
     useEffect(() =>{
@@ -16,7 +16,7 @@ function Herosection(){
         }
     }, [isInView]);
     return(
-        <div className="relative w-full h-[800px] pt-20 pl-14">
+        <div className="relative w-full h-[800px] pt-32 pl-28">
             <img 
                 src={heroimg}
                 className="absolute inset-0 w-full h-full object-cover"
@@ -38,7 +38,7 @@ function Herosection(){
                     variants={variants}
                     initial="hidden"
                     animate={mainControls}
-                    className="md:text-4xl text-white font-bold"
+                    className="md:text-4xl text-white font-bold mb-7"
                 >
                     Discover premium clothing designed just for you.
                 </motion.p>
