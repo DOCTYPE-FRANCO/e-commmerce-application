@@ -54,8 +54,10 @@ function Homepage(){
         <div className="z-30">
             <Herosection />
 
-           <div>
-
+           <div className="grid grid-cols-4 gap-3.5 z-20 pl-2 mt-10">
+                {products.map((product) => (
+                    <div key={product.id} className="flex flex-col bg-white w-[250px] h-[400px] shadow-2xl shadow-gray-500 rounded-md"></div>
+                ))}
            </div>
         </div>
     );
