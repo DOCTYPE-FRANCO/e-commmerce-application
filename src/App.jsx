@@ -60,7 +60,7 @@ function App(){
       {/* Your Content/Components */}
       <div>
         <Header />
-        <div>
+        <div className='relative z-30'>
           <Routes>
             <Route path='/' element={<Homepage />} />
           </Routes>
