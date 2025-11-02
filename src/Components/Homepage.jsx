@@ -58,8 +58,13 @@ function Homepage(){
 
            <div className="grid grid-cols-4 gap-3.5 z-20 pl-4 mt-10">
                 {products.map((product) => (
-                    <div key={product.id} className="flex flex-col bg-white w-[250px] h-[350px] shadow-2xl shadow-gray-500 rounded-md">
-                        <div></div>
+                    <div key={product.id} className="flex flex-col justify-center items-center bg-white w-[250px] h-[300px] shadow-2xl shadow-gray-500 rounded-md">
+                        <div className="w-[180px] h-[170px] overflow-hidden rounded-2xl">
+                            <img src={product.image} className="w-full object-top hover:scale-110 transition-transform duration-500"/>
+                        </div>
+                        <div>
+                            <p className="">{product.name}</p>
+                        </div>
                     </div>
                 ))}
            </div>
