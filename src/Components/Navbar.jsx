@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import { MenuIcon, XIcon } from "lucide-react";
 
 function Navbar(){
-    const [tab, setTab] = useState(true);
+    const [tab, setTab] = useState(false);
     return(
         <div className="md:pr-20 pr-5">
             <ul className="hidden md:flex flex-row gap-10 justify-center items-center">
