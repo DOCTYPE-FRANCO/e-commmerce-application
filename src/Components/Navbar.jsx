@@ -10,7 +10,7 @@ function Navbar(){
                 <p className="font-bold hover:text-gray-500 hover:cursor-pointer">Cart</p>
             </ul>
 
-            <div>
+            <div className="md:hidden">
                 <MenuIcon />
             </div>
         </div>

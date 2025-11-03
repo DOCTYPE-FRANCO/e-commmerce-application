@@ -16,10 +16,11 @@ function Herosection(){
         }
     }, [isInView]);
     return(
-        <div className="flex justify-center  relative w-full h-[500px] pt-32 md:pl-28">
+        <div className="flex justify-center md:justify-start  relative w-full h-[500px] pt-32 md:pl-28">
             <img 
                 src={heroimg}
                 className="absolute inset-0 w-full h-[500px] object-cover"
+                loading="eager"
             />
 
             <div className="absolute inset-0 bg-black/50" />
@@ -42,7 +43,7 @@ function Herosection(){
                     variants={variants}
                     initial="hidden"
                     animate={mainControls}
-                    className="md:text-3xl text-xl text-white font-bold mb-7 text-center max-w-[300px]"
+                    className="md:text-3xl text-xl text-white font-bold mb-7 text-center max-w-[300px] md:max-w-[800px]"
                 >
                     Elevate your Style without breaking the bank.
                 </p>
