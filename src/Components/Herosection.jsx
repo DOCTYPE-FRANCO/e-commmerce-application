@@ -34,7 +34,7 @@ function Herosection(){
             >
 
                 <p
-                    className="flex justify-center md:justify-start md:text-7xl text-4xl text-white font-extrabold"
+                    className="flex justify-center md:justify-start md:text-7xl text-5xl text-white font-extrabold"
                 >
                     Mekus Luxury
                 </p>
