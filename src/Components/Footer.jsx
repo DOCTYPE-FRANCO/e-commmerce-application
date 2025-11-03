@@ -11,7 +11,7 @@ function Footer(){
                 </div>
 
                 <div className="flex flex-col  gap-3 md:gap-2 justify-center items-center mr-10 mt-10">
-                    <p className="font-extrabold text-2xl text-center max-w-[300px] md:max-w-[600px]">SIGN UP FOR DISCOUNTS & UPDATES</p>< br/>
+                    <p className="font-extrabold text-2xl max-w-[300px] md:max-w-[600px]">SIGN UP FOR DISCOUNTS & UPDATES</p>< br/>
                     <input type="text" placeholder="Enter your email" className=" text-white flex border border-gray-300 rounded-2xl w-[250px] md:w-[450px] h-10 pl-4"/>
                     <button className="bg-black text-white w-43 h-10 font-bold rounded-full mt-3 hover:bg-gray-600 transition-all duration-500">SUBSCRIBE</button>
                 </div>
