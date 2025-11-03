@@ -1,5 +1,6 @@
-import React from "react";
+import React, {useEffect, useRef} from "react";
 import Herosection from "./Herosection";
+import {motion, useAnimation, useInView} from "framer-motion"
 import PlainTee from "../assets/plain.jpg"
 import Jean from "../assets/baggyjean.jpg"
 import Joggers from "../assets/joggers.jpg"
@@ -11,6 +12,20 @@ import Slides from "../assets/slides.jpeg"
 import Boxers from "../assets/boxers.jpeg"
 
 function Homepage(){
+    const ref = useRef(null);
+    const isInView = useInView(ref);
+    const mainControls = useAnimation();
+
+    const variants = {
+        hidden: {opacity: 0, x: 75},
+        visible: {opacity: 1, x: 0, transition:{duration: 1.5}}
+    }
+
+    useEffect(() =>{
+        if (isInView) {
+            mainControls.start("visible");
+        }
+    }, [isInView]);
 
     const products = [
         {
@@ -56,7 +71,13 @@ function Homepage(){
 
             <p className="mt-20 text-black text-5xl font-extrabold text-center">CURATED FOR YOU</p>
 
-           <div className="grid grid-cols-4 gap-3.5 z-20 pl-4 mt-10">
+           <motion.div
+                initial="hidden"
+                animate={mainControls}
+                variants={variants}
+                ref={ref}
+                className="grid grid-cols-4 gap-3.5 z-20 pl-4 mt-10"
+            >
                 {products.map((product) => (
                     <div key={product.id} className="flex flex-col gap-2 justify-center items-center bg-white w-[250px] h-[300px] shadow-2xl shadow-gray-500 rounded-md">
                         <div className="w-[180px] h-[170px] overflow-hidden rounded-2xl">
@@ -69,7 +90,7 @@ function Homepage(){
                         <p className="bg-black text-white p-1 px-7 mt-5 font-bold rounded-sm">GO TO SHOP</p>
                     </div>
                 ))}
-           </div>
+           </motion.div>
         </div>
     );
 }
