@@ -16,10 +16,10 @@ function Herosection(){
         }
     }, [isInView]);
     return(
-        <div className="relative w-full h-[600px] pt-32 pl-28">
+        <div className="relative w-full h-[500px] pt-32 pl-28">
             <img 
                 src={heroimg}
-                className="absolute inset-0 w-full h-[600px] object-cover"
+                className="absolute inset-0 w-full h-[500px] object-cover"
             />
 
             <div className="absolute inset-0 bg-black/50" />
