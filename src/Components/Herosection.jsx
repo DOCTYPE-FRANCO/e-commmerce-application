@@ -16,7 +16,7 @@ function Herosection(){
         }
     }, [isInView]);
     return(
-        <div className="relative w-full h-[500px] pt-32 pl-28">
+        <div className="flex  relative w-full h-[500px] pt-32 md:pl-28">
             <img 
                 src={heroimg}
                 className="absolute inset-0 w-full h-[500px] object-cover"
@@ -26,14 +26,14 @@ function Herosection(){
 
             <motion.div
                 ref={ref}
-                className="relative z-20 flex flex-col gap-4"
+                className="relative z-20 flex flex-col gap-4 "
                 variants={variants}
                 initial="hidden"
                 animate={mainControls}
             >
 
                 <p
-                    className="md:text-7xl text-white font-extrabold"
+                    className="flex justify-center md:justify-start md:text-7xl text-3xl text-white font-extrabold"
                 >
                     Mekus Luxury
                 </p>
@@ -42,7 +42,7 @@ function Herosection(){
                     variants={variants}
                     initial="hidden"
                     animate={mainControls}
-                    className="md:text-3xl text-white font-bold mb-7"
+                    className="md:text-3xl text-2xl text-white font-bold mb-7 text-center"
                 >
                     Elevate your Style without breaking the bank.
                 </p>

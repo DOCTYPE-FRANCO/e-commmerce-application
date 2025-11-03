@@ -76,7 +76,7 @@ function Homepage(){
                 animate={mainControls}
                 variants={variants}
                 ref={ref}
-                className="grid grid-cols-4 gap-3.5 z-20 pl-4 mt-10"
+                className="grid grid-cols-1 md:grid-cols-4 gap-3.5 z-20 pl-4 mt-10"
             >
                 {products.map((product) => (
                     <div key={product.id} className="flex flex-col gap-2 justify-center items-center bg-white w-[250px] h-[300px] shadow-2xl shadow-gray-500 rounded-md">
