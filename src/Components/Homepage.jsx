@@ -69,14 +69,14 @@ function Homepage(){
         <div className="z-30">
             <Herosection />
 
-            <p className="mt-20 text-black text-5xl font-extrabold text-center">CURATED FOR YOU</p>
+            <p className="mt-20 text-black text-3xl md:text-5xl font-extrabold text-center">CURATED FOR YOU</p>
 
            <motion.div
                 initial="hidden"
                 animate={mainControls}
                 variants={variants}
                 ref={ref}
-                className="grid grid-cols-1 md:grid-cols-4 gap-3.5 z-20 pl-4 mt-10"
+                className="md:grid  md:grid-cols-4 flex flex-col justify-center items-center gap-3.5 z-20 md:pl-4 mt-10"
             >
                 {products.map((product) => (
                     <div key={product.id} className="flex flex-col gap-2 justify-center items-center bg-white w-[250px] h-[300px] shadow-2xl shadow-gray-500 rounded-md">
