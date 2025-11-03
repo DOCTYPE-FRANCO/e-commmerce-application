@@ -87,7 +87,7 @@ function Homepage(){
                             <p className="font-bold">{product.name}</p>
                         </div>
 
-                        <p className="bg-black text-white p-1 px-7 mt-5 font-bold rounded-sm">GO TO SHOP</p>
+                        <p onClick={() => alert("Not Yet in Store!")} className="bg-black text-white p-1 px-7 mt-5 font-bold rounded-sm">GO TO SHOP</p>
                     </div>
                 ))}
            </motion.div>

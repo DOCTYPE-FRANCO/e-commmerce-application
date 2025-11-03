@@ -52,6 +52,7 @@ function Herosection(){
                     variants={variants}
                     initial="hidden"
                     animate={mainControls}
+                    onClick={() => alert("No Products Yet!")}
                     className="w-[300px] h-[45px] font-extrabold bg-white hover:scale-110 flex justify-center items-center transition-transform duration-500 rounded-sm"
                 >
                     SHOP NOW

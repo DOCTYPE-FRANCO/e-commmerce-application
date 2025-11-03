@@ -1,7 +1,8 @@
-import React from "react";
-import { MenuIcon } from "lucide-react";
+import React, {useState} from "react";
+import { MenuIcon, XIcon } from "lucide-react";
 
 function Navbar(){
+    const [tab, setTab] = useState(true);
     return(
         <div className="md:pr-20 pr-5">
             <ul className="hidden md:flex flex-row gap-10 justify-center items-center">
@@ -10,9 +11,19 @@ function Navbar(){
                 <p className="font-bold hover:text-gray-500 hover:cursor-pointer">Cart</p>
             </ul>
 
-            <div className="md:hidden">
-                <MenuIcon />
+            <div className="md:hidden" onClick={() => setTab(!tab)}>
+                {tab ? <XIcon /> : <MenuIcon />}
             </div>
+
+            {tab && (
+                <div className="flex justify-center items-center  backdrop-blur-sm top-20 right-10 fixed bg-gray-700/80 w-[150px] h-[170px] rounded-md">
+                    <ul className="flex flex-col text-white font-bold gap-5 justify-center items-center">
+                        <p className="font-bold hover:text-gray-500 hover:cursor-pointer">Home</p>
+                        <p className="font-bold hover:text-gray-500 hover:cursor-pointer">Shop</p>
+                        <p className="font-bold hover:text-gray-500 hover:cursor-pointer">Cart</p>
+                    </ul>  
+                </div>
+            )}
         </div>
     );
 }
